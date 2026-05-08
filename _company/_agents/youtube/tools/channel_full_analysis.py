@@ -6,12 +6,13 @@ No additional config needed. Output: full report with stats, patterns, and
 data-driven recommendations.
 """
 import os, json, sys, time, datetime, statistics, re
-from collections import Counter
-
 try:
+    import sys
     sys.stdout.reconfigure(encoding='utf-8')
-except AttributeError:
+    sys.stderr.reconfigure(encoding='utf-8')
+except:
     pass
+from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ACCOUNT = os.path.join(HERE, "youtube_account.json")
